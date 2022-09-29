@@ -33,6 +33,7 @@ const Navbar = (props: Props) => {
 
     const handleCloses = () => {
         setShowCurrency(false);
+        setShowCartItems(false)
     };
 
     return (

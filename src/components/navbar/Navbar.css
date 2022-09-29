@@ -51,7 +51,7 @@ a {
     max-height: 100px;
     width: 100%;
     object-fit: contain;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .navbar__cart {
@@ -166,7 +166,6 @@ a {
     height: auto;
     border-radius: 2px;
     z-index: 999;
-    cursor: pointer;
 }
 
 .hideCartItems {
@@ -217,15 +216,15 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 21px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .cart_header_content_img>img {
     height: auto;
     width: 100%;
     object-fit: contain;
-    cursor: pointer;
     margin-top: 60px;
+    /* cursor: pointer; */
 }
 
 
@@ -237,7 +236,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     font-size: 10px;
 }
 
@@ -248,7 +247,7 @@ a {
     height: 10px;
     padding: 10px;
     margin-left: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -263,7 +262,7 @@ a {
     height: 10px;
     padding: 10px;
     margin-left: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,7 +285,7 @@ a {
     width: 14px;
     height: 10px;
     padding: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .cart_header_col1 {
@@ -310,7 +309,7 @@ a {
     width: 14px;
     height: 10px;
     padding: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -329,7 +328,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    /* cursor: pointer; */
     font-size: 12px;
 }
 
