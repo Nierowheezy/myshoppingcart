@@ -1,0 +1,139 @@
+.details_content {
+    display: flex;
+    justify-content: space-around;
+    align-items: normal;
+}
+
+
+.details_content_images {
+    display: flex;
+    flex-direction: column;
+    width: 4%;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    gap: 21px;
+    cursor: pointer;
+}
+
+.details_content_img>img {
+    height: auto;
+    width: 456px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+
+
+.details__sizes {
+    display: flex;
+
+}
+
+.details__xs {
+    border: 1px solid #1D1F22;
+    width: 54px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.details__s {
+    background-color: #1D1F22;
+    border: 1px solid #1D1F22;
+    width: 54px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.details__m,
+.details__l {
+    border: 1px solid #1D1F22;
+    width: 54px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details__xs:hover,
+.details__m:hover,
+.details__l:hover {
+    background-color: #1D1F22;
+    color: #fff;
+}
+
+.details_col1,
+.details_col2,
+.details_col3 {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.details_col1 {
+    background-color: #D3D2D5;
+}
+
+.details_col2 {
+    background-color: #2B2B2B;
+    margin-left: 10px;
+}
+
+.details_col3 {
+    background-color: #0F6450;
+    margin-left: 10px;
+
+}
+
+.details_col1:hover,
+.details_col2:hover,
+.details_col3:hover {
+    border: 2px solid #5ECE7B;
+}
+
+
+
+
+.details_content_detail {
+    display: flex;
+    flex-direction: column;
+    /* margin-right: 136px; */
+    width: 340px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.details_content_detail>h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.details_content_detail .details__subhead {
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.button__addtocart {
+    width: 82%;
+    height: auto;
+    background: #5ECE7B;
+    color: #fff;
+    border-radius: 0;
+    padding: 15px;
+    /* margin-left: 30px; */
+}
+
+.details__decsription {
+    width: 280px;
+}
