@@ -1,72 +1,46 @@
-import { useDispatch } from "react-redux";
-import sweat_shirt1 from '../../images/sweat_shirt1.png';
-import {
-    decrementQuantity,
-    incrementQuantity
-} from "../../redux/cartSlice";
+import { useSelector } from "react-redux";
 import './cart.css';
+import CartItem from "./CartItem";
 
 
 
 const Cart = (props: any) => {
 
-    const { id, image, title, price, quantity = 0 } = props
+    const cart = useSelector((state: any) => state.cart);
 
-    const dispatch = useDispatch();
+    const getTotal = () => {
+        let totalQuantity = 0;
+        let totalPrice = 0;
+        cart.forEach((item: any) => {
+            totalQuantity += item.quantity;
+            totalPrice += item.price * item.quantity;
+        });
+        return { totalPrice, totalQuantity };
+    };
 
     return (
         <>
             <h1 className="text-3xl mb-24 ml-16">Cart</h1>
 
-            <hr />
+            {/* <hr /> */}
             <section className='cart__all mb-4 mt-4'>
-                <div className='cart_content'>
-
-                    <div className='cart_content_detail'>
-                        <h1>Apollo</h1>
-                        <p className='cart__subhead'>Running Short</p>
-                        <h3>PIRCE</h3>
-                        <h4>${price}</h4>
-
-                        <h3>SIZE:</h3>
-                        <div className='cart__sizes'>
-                            <div className='cart__xs'>XS</div>
-                            <div className='cart__s'>S</div>
-                            <div className='cart__m'>M</div>
-                            <div className='cart__l'>L</div>
-                        </div>
-
-                        <h3>COLOR:</h3>
-                        <div className='cart__sizes'>
-                            <div className='cart_col1'></div>
-                            <div className='cart_col2'></div>
-                            <div className='cart_col3'></div>
-                        </div>
-
-                    </div>
-
-
-
-                    {/* <button className='button__addtocart'>Add To Cart</button> */}
-
-                    <div className='cart_content_calc'>
-                        <div className='cart_add mt-4' onClick={() => dispatch(incrementQuantity(id))}>+</div>
-                        <div className='cart_count'>{quantity}</div>
-                        <div className='cart_subtract mb-4' onClick={() => dispatch(decrementQuantity(id))}>-</div>
-                    </div>
-                    <div className='cart_content_img mt-4'>
-                        <img src={sweat_shirt1} alt='' />
-                    </div>
-
-                </div>
-
+                {cart?.map((item: any) => (
+                    <CartItem
+                        key={item.id}
+                        id={item.id}
+                        image={item.image}
+                        title={item.title}
+                        price={item.price}
+                        quantity={item.quantity}
+                    />
+                ))}
             </section>
-            <hr />
+            {/* <hr /> */}
 
             <div className='cart__order'>
                 <h3>Tax 21%:   $42.00</h3>
-                <h3>Quantity: 3</h3>
-                <h3>Total: $200.00</h3>
+                <h3>Quantity: {getTotal().totalQuantity} items</h3>
+                <h3>Total: ${getTotal().totalPrice}</h3>
                 <button className='button__cart__order mt-2'>Order</button>
             </div>
 

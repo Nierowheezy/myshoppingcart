@@ -67,7 +67,7 @@ const Navbar = (props: Props) => {
                                 <span>$</span>
                                 <img src={arrow_down} className='arrow_down ml-2 mr-4' onClick={() => setShowCurrency(!showCurrency)} alt="arrow_down" />
                                 <img src={empty_cart} className='empty_cart' onClick={() => setShowCartItems(!showCartItems)} alt="empty_cart" />
-                                <p className='navbar__item__count'>{getTotalQuantity() || 0}</p>
+                                <p className='navbar__item__count' onClick={() => navigate('/cart')}>{getTotalQuantity() || 0}</p>
                             </div>
 
 
