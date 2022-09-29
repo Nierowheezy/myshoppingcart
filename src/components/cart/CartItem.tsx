@@ -26,7 +26,7 @@ const CartItem = (props: any) => {
                         <h1>{title}</h1>
                         <p className='cart__subhead'>Running Short</p>
                         <h3>PIRCE</h3>
-                        <h4>{price}</h4>
+                        <h4>${price}</h4>
 
                         <h3>SIZE:</h3>
                         <div className='cart__sizes'>

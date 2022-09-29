@@ -36,7 +36,7 @@ const CategoryItems = ({ id, title, price, image }: Props) => {
                     </div>
                 </div>
                 <h4 className='mt-4'>{title}</h4>
-                <h6>{price}</h6>
+                <h6>${price}</h6>
                 <div className='add__to__cart__overlay'>
                     <div></div>
                     <div></div>
