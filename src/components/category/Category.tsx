@@ -18,19 +18,19 @@ const Category = () => {
                 <CategoryItems
                     id={1}
                     title={'Apollo Running Short'}
-                    price={'$50.00'}
+                    price={50.00}
                     image={sweatShirt1}
                 />
                 <CategoryItems
                     id={2}
                     title={'Apollo Running Short'}
-                    price={'$50.00'}
+                    price={50.00}
                     image={sweatShirt2}
                 />
                 <CategoryItems
                     id={3}
                     title={'Apollo Running Short'}
-                    price={'$50.00'}
+                    price={50.00}
                     image={sweatShirt3}
                 />
             </div>
@@ -38,19 +38,19 @@ const Category = () => {
                 <CategoryItems
                     id={4}
                     title={'Apollo Running Short'}
-                    price={'$50.00'}
+                    price={50.00}
                     image={sweatShirt4}
                 />
                 <CategoryItems
                     id={5}
                     title={'Apollo Running Short'}
-                    price={'$50.00'}
+                    price={50.00}
                     image={sweatShirt1}
                 />
                 <CategoryItems
                     id={6}
                     title={'Apollo Running Short'}
-                    price={'$50.00'}
+                    price={50.00}
                     image={sweatShirt5}
                 />
             </div>
