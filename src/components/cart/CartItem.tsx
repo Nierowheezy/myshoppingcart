@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import sweat_shirt1 from '../../images/sweat_shirt1.png';
+import { useDispatch } from "react-redux";
+// import sweat_shirt1 from '../../images/sweat_shirt1.png';
 import {
     decrementQuantity,
     incrementQuantity
@@ -14,18 +14,6 @@ const CartItem = (props: any) => {
 
     const dispatch = useDispatch();
 
-    const cart = useSelector((state: any) => state.cart);
-
-    const getTotal = () => {
-        let totalQuantity = 0;
-        let totalPrice = 0;
-        cart.forEach((item: any) => {
-            totalQuantity += item.quantity;
-            totalPrice += item.price * item.quantity;
-        });
-        return { totalPrice, totalQuantity };
-    };
-
     return (
         <>
             {/* <h1 className="text-3xl mb-24 ml-16">Cart</h1> */}
@@ -35,7 +23,7 @@ const CartItem = (props: any) => {
                 <div className='cart_content'>
 
                     <div className='cart_content_detail'>
-                        <h1>Apollo</h1>
+                        <h1>{title}</h1>
                         <p className='cart__subhead'>Running Short</p>
                         <h3>PIRCE</h3>
                         <h4>{price}</h4>
@@ -67,7 +55,7 @@ const CartItem = (props: any) => {
                         <div className='cart_subtract mb-4' onClick={() => dispatch(decrementQuantity(id))}>-</div>
                     </div>
                     <div className='cart_content_img mt-4'>
-                        <img src={sweat_shirt1} alt='' />
+                        <img src={image} alt='' />
                     </div>
 
                 </div>
