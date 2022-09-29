@@ -15,7 +15,7 @@ const ProductDetails = (props: Props) => {
 
     const compare = () => {
         let compareData = cart.filter((e: any) => {
-            return e.id === id
+            return e.id == id
         })
         setData(compareData)
     }
@@ -23,6 +23,9 @@ const ProductDetails = (props: Props) => {
     useEffect(() => {
         compare()
     }, [id])
+
+    console.log(cart);
+
 
 
 
