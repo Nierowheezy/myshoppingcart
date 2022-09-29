@@ -2,6 +2,7 @@
 
 ![](docs/Category.png)
 ![](docs/Cart.png)
+![](docs/paystack.png)
 ![](docs/CurrencySwitcher.png)
 ![](docs/PDP.png)
 
