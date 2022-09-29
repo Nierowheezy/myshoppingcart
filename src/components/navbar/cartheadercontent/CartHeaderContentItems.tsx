@@ -10,13 +10,13 @@ import {
 // type Props = {}
 
 const CartHeaderContentItems = (props: any) => {
-    const { id, image, title, price, quantity = 0 } = props
+    const { id, image, title, price, quantity = 0, handleCloses } = props
     const dispatch = useDispatch();
 
 
     return (
         <>
-            <Link to={`/details/${id}`}>
+            <Link to={`/details/${id}`} onClick={() => handleCloses()}>
 
                 <div className="cart_header_content">
 

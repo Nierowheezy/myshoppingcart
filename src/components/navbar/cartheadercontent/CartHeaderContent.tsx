@@ -2,9 +2,12 @@ import { useSelector } from "react-redux";
 import CartHeaderContentItems from "./CartHeaderContentItems";
 
 
-type Props = {}
+type Props = {
 
-const CartHeaderContent = (props: Props) => {
+}
+
+const CartHeaderContent = (props: any) => {
+    const { handleCloses } = props
     const cart = useSelector((state: any) => state.cart);
 
     return (

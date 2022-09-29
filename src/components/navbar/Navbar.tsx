@@ -90,7 +90,7 @@ const Navbar = (props: Props) => {
                 {/* cart  */}
 
                 <div className={showCartItems ? "showCartItems" : "hideCartItems"}>
-                    <CartHeaderContent />
+                    <CartHeaderContent handleCloses={handleCloses} />
                 </div>
             </div>
         </>
