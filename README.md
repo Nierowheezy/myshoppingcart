@@ -7,9 +7,11 @@
 
 ## The challenge
 
-[Instructions](<https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-(Public)?node-id=0%3A1>)
+[Figma Link](<https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-(Public)?node-id=0%3A1>)
 
 Design the screens and implement checkout with Paystack:
+
+## Instructions
 
 - Ensure the use of redux for state management
 - Ensure the use of typescript
