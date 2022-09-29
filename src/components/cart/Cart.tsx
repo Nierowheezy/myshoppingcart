@@ -1,3 +1,4 @@
+import { PaystackButton } from "react-paystack";
 import { useSelector } from "react-redux";
 import './cart.css';
 import CartItem from "./CartItem";
@@ -17,6 +18,42 @@ const Cart = (props: any) => {
         });
         return { totalPrice, totalQuantity };
     };
+
+
+    const config = {
+        reference: new Date().getTime().toString(),
+        email: 'Buyer@gmail.com',
+        items: getTotal().totalQuantity,
+        amount: getTotal().totalPrice * 100,
+        publicKey: "pk_test_542f13c10fbc1f25bfa6b889d6d8941f12c3d901",
+        // publicKey: process.env.REACT_APP_PAYSTACK,
+    };
+
+    console.log(process.env.REACT_APP_PAYSTACK);
+
+    // you can call this function anything
+    const handlePaystackSuccessAction = (reference: any) => {
+        // Implementation for whatever you want to do with reference and after success call.
+        console.log(
+            `payment complete! with reference number ${JSON.stringify(
+                reference.reference
+            )}`
+        );
+    };
+
+    // you can call this function anything
+    const handlePaystackCloseAction = () => {
+        // implementation for  whatever you want to do when the Paystack dialog closed.
+        alert("You have cancled this transaction");
+    };
+
+    const componentProps = {
+        ...config,
+        text: "Pay Now",
+        onSuccess: (reference: any) => handlePaystackSuccessAction(reference),
+        onClose: handlePaystackCloseAction,
+    };
+
 
     return (
         <>
@@ -41,7 +78,9 @@ const Cart = (props: any) => {
                 <h3>Tax 21%:   $42.00</h3>
                 <h3>Quantity: {getTotal().totalQuantity} items</h3>
                 <h3>Total: ${getTotal().totalPrice}</h3>
-                <button className='button__cart__order mt-2'>Order</button>
+                <PaystackButton className='button__cart__order mt-2' {...componentProps} />
+
+                {/* <button className='button__cart__order mt-2'>Order</button> */}
             </div>
 
         </>
