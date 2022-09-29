@@ -7,7 +7,6 @@ type Props = {
 }
 
 const CartHeaderContent = (props: any) => {
-    const { handleCloses } = props
     const cart = useSelector((state: any) => state.cart);
 
     return (
