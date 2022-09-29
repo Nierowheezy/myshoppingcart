@@ -15,6 +15,7 @@ const ProductDetails = (props: Props) => {
 
     const compare = () => {
         let compareData = cart.filter((e: any) => {
+            // eslint-disable-next-line
             return e.id == id
         })
         setData(compareData)
@@ -22,6 +23,7 @@ const ProductDetails = (props: Props) => {
 
     useEffect(() => {
         compare()
+        // eslint-disable-next-line
     }, [id])
 
     console.log(cart);
