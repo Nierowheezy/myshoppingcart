@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import arrow_down from '../../images/arrow_down.png'
 import empty_cart from '../../images/empty_cart.png'
 import logo from '../../images/logo.png'
@@ -54,13 +54,13 @@ const Navbar = (props: Props) => {
 
                         <ul id="menu">
                             <div className='navbar__menu__item'>
-                                <li><a href="#home">Women</a></li>
-                                <li><a href="#services">Men</a></li>
-                                <li><a href="#about">Kids</a></li>
+                                <li><Link to="/">Women</Link></li>
+                                <li><Link to="/">Men</Link></li>
+                                <li><Link to="/">Kids</Link></li>
                             </div>
 
                             <div className='navbar__logo'>
-                                <img src={logo} alt="logo" />
+                                <img src={logo} alt="logo" onClick={() => navigate('/cart')} />
                             </div>
 
                             <div className='navbar__cart'>

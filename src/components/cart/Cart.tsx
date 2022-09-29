@@ -20,7 +20,7 @@ const Cart = (props: any) => {
 
     return (
         <>
-            <h1 className="text-3xl mb-24 ml-16">Cart</h1>
+            <h1 className="text-3xl mb-24 ml-20 mt-28">Cart</h1>
 
             {/* <hr /> */}
             <section className='cart__all mb-4 mt-4'>
